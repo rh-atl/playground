@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="user-input"></p>
+
+    <script>
+        // Vulnerable to XSS
+        var userInput = "<script>alert('XSS');</script>";
+        document.getElementById('user-input').innerHTML = userInput;
+    </script>
+</body>
+</html>
